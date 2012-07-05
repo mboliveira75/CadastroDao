@@ -1,11 +1,22 @@
 package com.xpto.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+@Entity
 public class PessoaBean {
 	
 	private String nome;
 	private String email;
 	private String cpf;
+	
+	@OneToOne
 	EnderecoBean endereco;
+	
+	@Id @GeneratedValue
+	private Long id;
 	
 	public PessoaBean(){
 		
@@ -42,6 +53,15 @@ public class PessoaBean {
 
 	public void setEndereco(EnderecoBean endereco) {
 		this.endereco = endereco;
+	}
+	
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	@Override

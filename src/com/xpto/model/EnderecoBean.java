@@ -1,5 +1,10 @@
 package com.xpto.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class EnderecoBean {
 	
 	private String logradouro;
@@ -7,6 +12,8 @@ public class EnderecoBean {
 	private String cidade;
 	private String cep;
 	private String estado;
+	
+	@Id @GeneratedValue
 	private Long id;
 	
 	public EnderecoBean(){

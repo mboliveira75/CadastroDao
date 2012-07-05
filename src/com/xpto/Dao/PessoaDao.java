@@ -1,5 +1,11 @@
 package com.xpto.Dao;
 
-public class PessoaDao {
+import com.xpto.model.PessoaBean;
+
+public class PessoaDao extends Dao<PessoaBean> {
+
+	public PessoaDao() {
+		super(PessoaBean.class);
+	}
 
 }

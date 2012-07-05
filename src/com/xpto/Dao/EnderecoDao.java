@@ -1,5 +1,15 @@
 package com.xpto.Dao;
 
-public class EnderecoDao {
+
+
+import com.xpto.model.EnderecoBean;
+
+public class EnderecoDao extends Dao<EnderecoBean> {
+
+	public EnderecoDao() {
+		super(EnderecoBean.class);
+	}
+	
+	
 
 }
